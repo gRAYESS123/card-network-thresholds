@@ -1,0 +1,115 @@
+{
+  "last_verified": "2026-06-10",
+  "source_urls": [
+    "https://corporate.visa.com/content/dam/VCOM/corporate/visa-perspectives/security-and-trust/documents/visa-acquirer-monitoring-program-fact-sheet-2025.pdf",
+    "https://docs.stripe.com/disputes/monitoring-programs",
+    "https://docs.adyen.com/risk-management/dispute-and-fraud-monitoring/"
+  ],
+  "programs": [
+    {
+      "program": "VAMP",
+      "network": "Visa",
+      "level": "merchant",
+      "tier": "Excessive Merchant",
+      "threshold_ratio": 0.015,
+      "threshold_count": 1500,
+      "region_notes": "1.5% since 2026-04-01 in AP, Canada, EU, US (reduced from 2.2%); LAC already 1.5%; CEMEA remains 2.2% with a minimum of 150 fraud+dispute transactions and USD 75,000. Count-based ratio: (TC40 fraud + TC15 disputes) / settled TC05 card-not-present transactions, monthly. RDR/CDRN-resolved disputes and Compelling Evidence 3.0 TC40s excluded. Merchant thresholds apply only if the acquirer is below Above Standard (<0.5%).",
+      "effective_date": "2026-04-01",
+      "fine_schedule": null,
+      "citation": "https://corporate.visa.com/content/dam/VCOM/corporate/visa-perspectives/security-and-trust/documents/visa-acquirer-monitoring-program-fact-sheet-2025.pdf"
+    },
+    {
+      "program": "VAMP",
+      "network": "Visa",
+      "level": "acquirer",
+      "tier": "Above Standard",
+      "threshold_ratio": 0.005,
+      "threshold_count": null,
+      "region_notes": "Acquirer portfolio-level combined fraud+dispute ratio.",
+      "effective_date": "2025-06-01",
+      "fine_schedule": null,
+      "citation": "https://corporate.visa.com/content/dam/VCOM/corporate/visa-perspectives/security-and-trust/documents/visa-acquirer-monitoring-program-fact-sheet-2025.pdf"
+    },
+    {
+      "program": "VAMP",
+      "network": "Visa",
+      "level": "acquirer",
+      "tier": "Excessive",
+      "threshold_ratio": 0.007,
+      "threshold_count": null,
+      "region_notes": "Acquirer portfolio-level combined fraud+dispute ratio.",
+      "effective_date": "2025-06-01",
+      "fine_schedule": null,
+      "citation": "https://corporate.visa.com/content/dam/VCOM/corporate/visa-perspectives/security-and-trust/documents/visa-acquirer-monitoring-program-fact-sheet-2025.pdf"
+    },
+    {
+      "program": "VAMP",
+      "network": "Visa",
+      "level": "merchant",
+      "tier": "Enumeration monitoring",
+      "threshold_ratio": 0.20,
+      "threshold_count": 300000,
+      "region_notes": "Enumeration ratio >=20% AND >=300,000 enumerated authorization transactions (approved + declined) per month. No fines are assessed for enumeration monitoring.",
+      "effective_date": "2025-06-01",
+      "fine_schedule": null,
+      "citation": "https://corporate.visa.com/content/dam/VCOM/corporate/visa-perspectives/security-and-trust/documents/visa-acquirer-monitoring-program-fact-sheet-2025.pdf"
+    },
+    {
+      "program": "ECP",
+      "network": "Mastercard",
+      "level": "merchant",
+      "tier": "ECM (Excessive Chargeback Merchant)",
+      "threshold_ratio": 0.015,
+      "threshold_count": 100,
+      "region_notes": "Trigger: 100-299 chargebacks AND 1.5%-2.99% in a month. Ratio = current-month chargeback count / preceding month's captured transaction count.",
+      "effective_date": null,
+      "fine_schedule": {
+        "currency": "USD",
+        "months_1": 0,
+        "months_2_3": 1000,
+        "months_4_6": 5000,
+        "months_7_11": 25000,
+        "months_12_18": 50000,
+        "months_19_plus": 100000
+      },
+      "citation": "https://docs.stripe.com/disputes/monitoring-programs"
+    },
+    {
+      "program": "ECP",
+      "network": "Mastercard",
+      "level": "merchant",
+      "tier": "HECM (High Excessive Chargeback Merchant)",
+      "threshold_ratio": 0.03,
+      "threshold_count": 300,
+      "region_notes": "Trigger: >=300 chargebacks AND >=3.0% in a month. Ratio = current-month chargeback count / preceding month's captured transaction count.",
+      "effective_date": null,
+      "fine_schedule": {
+        "currency": "USD",
+        "months_1": 0,
+        "months_2": 1000,
+        "months_3": 2000,
+        "months_4_6": 10000,
+        "months_7_11": 50000,
+        "months_12_18": 100000,
+        "months_19_plus": 200000
+      },
+      "citation": "https://docs.stripe.com/disputes/monitoring-programs"
+    },
+    {
+      "program": "ECP",
+      "network": "Mastercard",
+      "level": "merchant",
+      "tier": "Issuer Recovery Assessment",
+      "threshold_ratio": null,
+      "threshold_count": 300,
+      "region_notes": "USD 5 per chargeback above 300, from month 4 onward, in both ECM and HECM. Example: month-4 ECM merchant with 400 disputes owes 5000 + (400-300)*5 = 5500 USD.",
+      "effective_date": null,
+      "fine_schedule": {
+        "currency": "USD",
+        "per_chargeback_above_300": 5,
+        "applies_from_month": 4
+      },
+      "citation": "https://docs.stripe.com/disputes/monitoring-programs"
+    }
+  ]
+}
